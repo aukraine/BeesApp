@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block main %}
+  <div class="jumbotron">
+    <h1 class="display-3">Вулики:</h1>
+    <hr class="m-y-2">
+
+    {% for hive in hives %}
+      <p class="lead">Номер: {{ hive.number }} </p>
+      <p class="lead">Матка: {{ hive.uterus }} </p>
+      <p class="lead">Рамки: {{ hive.frames }} </p>
+      <p class="lead">Запис: {{ hive.actions }} </p>
+      <p class="lead">Дата створення: {{ hive.date_add }} </p>
+      <p class="lead">Дата перевірки: {{ hive.date_check }} </p>
+      <hr class="m-y-2">
+    {% endfor %}
+
+  </div>
+{% endblock %}
